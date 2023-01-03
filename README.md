@@ -12,7 +12,9 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 ## Motivation
 <details>
   <summary>Purpose</summary>
+
 When my family and I moved to Nashville in 2017, we experienced a slew of respiratory issues we had never faced before. Yet we were not alone in this phenomenon. Rumor had it that Nashville was notorious for causing breathing troubles for those who move there from other states. Naturally, this project presented an excellent opportunity to look into Nashville’s air quality.
+
 My personal journey began in San Diego, CA, where both my husband and I lived for the first twenty-five years. There, I only experienced breathing troubles during the occasional flu or cold. My husband, who is predisposed to respiratory issues, experienced mild allergies throughout the year. We then moved to Phoenix, AZ, where we lived for about two years. There, things more or less remained the same regarding our health. Then we moved to Nashville, where everything changed. I began experiencing allergy symptoms and my husband’s breathing became so compromised that anytime he got the flu or a cold, he would have to go to urgent care. In performing this analysis, I aim to equip myself and others with knowledge about potential causes for the common decline in respiratory health for those who move to Nashville from out of state.
 </details>
 
@@ -42,30 +44,31 @@ Due to the compact nature of the datasets, the collected data was imported as Ex
   * [Jupyter Notebooks](https://jupyter.org/)
   * [Anaconda](https://anaconda.org/)
   * Modules:
-    * [pandas](https://pandas.pydata.org/)
-    * [pandasql](https://pypi.org/project/pandasql/)
+    * [Pandas](https://pandas.pydata.org/)
+    * [PandaSQL](https://pypi.org/project/pandasql/)
     * [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
-    * [requests](https://requests.readthedocs.io/en/latest/)
-    * [beautifulsoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
+    * [Requests](https://requests.readthedocs.io/en/latest/)
+    * [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
 * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel)
 
-Back to [contents](#Contents)
+Back to [Table of Contents](#Table-of-Contents)
 
 ## Methods
 <details>
   <summary>Acquiring the Data</summary>
-In the end, I chose to look at nine cities, including the three I’ve lived in. While my focus will be on those three cities, the others included provide a comparative baseline and cover different geographies, climates, population densities and flora.
+
+I decided to look at nine cities, including the three I’ve lived in. While my focus will be on those three cities, the others included provide a comparative baseline and cover different geographies, climates, population densities and flora.
 
 The nine cities are split into 3 groups covering Western, Middle and Eastern US. The Western regions include Seattle, Washington; San Diego, California; and Phoenix, Arizona. The Mid-US regions include Minneapolis, Minnesota; Denver, Colorado; and Austin, Texas. The Eastern regions include Phildelphia, Pennsylvania; Nashville, Tennessee; and Jacksonville, Florida.
 
 1.	Pollen.com
-Collection of pollen data was achieved using webscraping. The data encompassed pollen-producing tree, grass and ragweed plants documented to grow in each city. The plants are categorized using flowering seasons (Spring, Summer, Fall and Winter), pollen type (Tree, Grass, Ragweed) and allergenicity levels (Mild, Moderate or Severe.) 
+  Collection of pollen data was achieved using webscraping. The data encompassed pollen-producing tree, grass and ragweed plants documented to grow in each city. The plants are categorized using flowering seasons (Spring, Summer, Fall and Winter), pollen type (Tree, Grass, Ragweed) and allergenicity levels (Mild, Moderate or Severe.) 
 
-Webscraping algorithms were created using Python, Jupyter Notebooks and the Anaconda environment. The resulting dataset was saved as a DataFrame, which was cleaned and prepared and then exported as both a CSV and a Microsoft Excel file.
+  Webscraping algorithms were created using Python, Jupyter Notebooks and the Anaconda environment. The resulting dataset was saved as a DataFrame, which was cleaned and prepared and then exported as both a CSV and a Microsoft Excel file.
 
-The main challenge was the need to simulate “mouse-click” behavior within the website to iterate through the different chart categories (e.g. season and type.) This challenge was overcome by incorporating the Python module, Selenium, into the webscraping algorithm. After researching the Selenium WebDriver documentation, installing the module, and incorporating its functionality, the algorithm successfully iterated through each of the website’s charts and retrieved the data needed for each city.
+  The main challenge was the need to simulate “mouse-click” behavior within the website to iterate through the different chart categories (e.g. season and type.) This challenge was overcome by incorporating the Python module, Selenium, into the webscraping algorithm. After researching the Selenium WebDriver documentation, installing the module, and incorporating its functionality, the algorithm successfully iterated through each of the website’s charts and retrieved the data needed for each city.
 
-Tools used: Webscraping, Python (modules: pandas, requests, bs4 (BeautifulSoup), selenium webdriver, time), Anaconda, Jupyter Notebooks.
+    Tools used: Webscraping, Python (modules: pandas, requests, bs4 (BeautifulSoup), selenium webdriver, time), Anaconda, Jupyter Notebooks.
 
 2.	Wikipedia.org
 Collection of general city information was achieved by webscraping each city’s Wikipedia website using Python and Jupyter Notebooks. The categories gleaned included city name, county, city land area, elevation, population census year, population density, metro population, population rank and climate type. This data was converted into a pandas DataFrame which was exported as both a CSV and a Microsoft Excel file.
