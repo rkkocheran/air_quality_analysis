@@ -12,18 +12,26 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 ## Motivation
 <details>  
   <summary>Expand</summary>   
-     
   When my family and I moved to Nashville in 2017, we experienced a slew of respiratory issues we had never faced before. Yet we were not alone in this phenomenon. Rumor had it that Nashville was notorious for causing breathing troubles for those who move there from other states. Naturally, this project presented an excellent opportunity to look into Nashville’s air quality.  
     
   My personal journey began in San Diego, CA, where both my husband and I lived for the first twenty-five years. There, I only experienced breathing troubles during the occasional flu or cold. My husband, who is predisposed to respiratory issues, experienced mild allergies throughout the year. We then moved to Phoenix, AZ, where we lived for about two years. There, things more or less remained the same regarding our health. Then we moved to Nashville, where everything changed. I began experiencing allergy symptoms and my husband’s breathing became so compromised that anytime he got the flu or a cold, he would have to go to urgent care. In performing this analysis, I aim to equip myself and others with knowledge about potential causes for the common decline in respiratory health for those who move to Nashville from out of state.
+
 </details>
 
 ## Data Questions
-1.	How is Nashville’s air quality different from other cities in which I’ve lived?
-2.	How does Nashville compare to other highly-populated cities?
+<details>  
+  <summary>Expand</summary>   
+
+  1.	How is Nashville’s air quality different from other cities in which I’ve lived?
+  2.	How does Nashville compare to other highly-populated cities?
+
+</details>
 
 ## Data Sources and Tools
-#### Overview
+<details>  
+  <summary>Expand</summary>   
+
+  #### Overview
   Data was extracted from three main sources:
   1.	EPA.com
   2.	Pollen.com
@@ -33,26 +41,28 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 
   Due to the compact nature of the datasets, the collected data was imported as Excel files into Tableau. Using Tableau, a many-to-many relationship was established between the datasets based on the city associated with each record. The data was then analyzed and transformed into multiple visualizations, and finally a presentation, to convey a meaningful story about the conclusions I drew from the data.  
 
-#### Data Sources
-* [EPA.gov](https://www.epa.gov/outdoor-air-quality-data)
-  * [Air Quality System, Annual Summaries](https://aqs.epa.gov/aqsweb/documents/data_api.html#annual)
-  * [Air Quality Index, Category Breakpoints](https://aqs.epa.gov/aqsweb/documents/codetables/aqi_breakpoints.html)
-* [Pollen.com](https://www.pollen.com/research/)
-* [Wikipedia.com](https://en.wikipedia.org/wiki/)
-#### Tools
-* [Tableau](https://www.tableau.com/)
-* [Python](https://www.python.org/)
-  * [Jupyter Notebooks](https://jupyter.org/)
-  * [Anaconda](https://anaconda.org/)
-  * Modules:
-    * [Pandas](https://pandas.pydata.org/)
-    * [PandaSQL](https://pypi.org/project/pandasql/)
-    * [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
-    * [Requests](https://requests.readthedocs.io/en/latest/)
-    * [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
-* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel)
+  #### Data Sources
+  * [EPA.gov](https://www.epa.gov/outdoor-air-quality-data)
+    * [Air Quality System, Annual Summaries](https://aqs.epa.gov/aqsweb/documents/data_api.html#annual)
+    * [Air Quality Index, Category Breakpoints](https://aqs.epa.gov/aqsweb/documents/codetables/aqi_breakpoints.html)
+  * [Pollen.com](https://www.pollen.com/research/)
+  * [Wikipedia.com](https://en.wikipedia.org/wiki/)
+  #### Tools
+  * [Tableau](https://www.tableau.com/)
+  * [Python](https://www.python.org/)
+    * [Jupyter Notebooks](https://jupyter.org/)
+    * [Anaconda](https://anaconda.org/)
+    * Modules:
+      * [Pandas](https://pandas.pydata.org/)
+      * [PandaSQL](https://pypi.org/project/pandasql/)
+      * [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
+      * [Requests](https://requests.readthedocs.io/en/latest/)
+      * [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
+  * [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel)
 
-[Back to [Table of Contents](#Table-of-Contents)]
+  [Back to [Table of Contents](#Table-of-Contents)]
+
+</details>  
 
 ## Methods
 <details>  
@@ -172,25 +182,28 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 <details>
   <summary>Expand</summary>
 
-#### I would like to thank...
+  #### I would like to thank...
   * [Nashville Software School](https://nashvillesoftwareschool.com/)
   * [The NSS DDA8 Cohort](https://nss-full-time-data-analytics-8.github.io/)
   * My academic instructors, advisors and supporters at Nashville Software School
   * Everyone whose encouragement and expertise helped transform this project from an idea into a reality
 
-#### Credits...
+  #### Credits
 
-  1. AQS images were obtained from: https://www.epa.gov/pmcourse/what-particle-pollution
-  2. AQI images were obtained from: https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index
-  3. Molecular structure images were obtained from: https://depositphotos.com/portfolio-1711722.html
-  4. Topographical maps were obtained from: https://en-us.topographic-map.com/
-  5. Street maps were obtained from: https://www.openstreetmap.org/
+  * AQS images were obtained from: https://www.epa.gov/pmcourse/what-particle-pollution
+  * AQI images were obtained from: https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index
+  * Molecular structure images were obtained from: https://depositphotos.com/portfolio-1711722.html
+  * Topographical maps were obtained from: https://en-us.topographic-map.com/
+  * Street maps were obtained from: https://www.openstreetmap.org/
 
-#### Other sources:
+  #### Sources
   1.	Patient Exposure and the Air Quality Index, available at https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index
   2.	Technical Note on Reporting PM2.5 Continuous Monitoring and Speciation Data to the Air Quality System (AQS), available at https://www.epa.gov/sites/default/files/2017-02/documents/contrept.pdf
   3.	AQS Data Dictionary [Version 2.28], section 3-22, available at as a PDF from https://www.epa.gov/aqs/aqs-data-dictionary
 
+  [Back to [Table of Contents](#Table-of-Contents)]
+
+</details>
 
 ## Link to the Project
 [Explore the project dashboards by clicking here!](www.github) There are many customizable and interactive features throughout the dashboards in the presentation. I encourage you to find out for yourself how Nashville’s air quality compares to other major cities around the country.
