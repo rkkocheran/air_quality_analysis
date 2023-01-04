@@ -12,8 +12,8 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 ## Motivation
 <details>
   <summary>Details</summary>
-  When my family and I moved to Nashville in 2017, we experienced a slew of respiratory issues we had never faced before. Yet we were not alone in this phenomenon. Rumor had it that Nashville was notorious for causing breathing troubles for those who move there from other states. Naturally, this project presented an excellent opportunity to look into Nashville’s air quality.
-  <br>  
+  When my family and I moved to Nashville in 2017, we experienced a slew of respiratory issues we had never faced before. Yet we were not alone in this phenomenon. Rumor had it that Nashville was notorious for causing breathing troubles for those who move there from other states. Naturally, this project presented an excellent opportunity to look into Nashville’s air quality.  
+  
   My personal journey began in San Diego, CA, where both my husband and I lived for the first twenty-five years. There, I only experienced breathing troubles during the occasional flu or cold. My husband, who is predisposed to respiratory issues, experienced mild allergies throughout the year. We then moved to Phoenix, AZ, where we lived for about two years. There, things more or less remained the same regarding our health. Then we moved to Nashville, where everything changed. I began experiencing allergy symptoms and my husband’s breathing became so compromised that anytime he got the flu or a cold, he would have to go to urgent care. In performing this analysis, I aim to equip myself and others with knowledge about potential causes for the common decline in respiratory health for those who move to Nashville from out of state.
 </details>
 
@@ -28,9 +28,9 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
   2.	Pollen.com
   3.	Wikipedia.com
 
-  Using Python and Jupyter Notebooks, API requests were made from the EPA’s Outdoor Air Quality website, which contains historical records of levels of airborne particles. Data about EPA’s Air Quality Index categories was also obtained in the form of a CSV file. Webscraping was also used to first collect data from Pollen.com about pollen-producing plants in cities throughout the US and then from Wikipedia, for general information about the cities chosen for this study.
+  Using Python and Jupyter Notebooks, API requests were made from the EPA’s Outdoor Air Quality website, which contains historical records of levels of airborne particles. Data about EPA’s Air Quality Index categories was also obtained in the form of a CSV file. Webscraping was also used to first collect data from Pollen.com about pollen-producing plants in cities throughout the US and then from Wikipedia, for general information about the cities chosen for this study.  
 
-  Due to the compact nature of the datasets, the collected data was imported as Excel files into Tableau. Using Tableau, a many-to-many relationship was established between the datasets based on the city associated with each record. The data was then analyzed and transformed into multiple visualizations, and finally a presentation, to convey a meaningful story about the conclusions I drew from the data.
+  Due to the compact nature of the datasets, the collected data was imported as Excel files into Tableau. Using Tableau, a many-to-many relationship was established between the datasets based on the city associated with each record. The data was then analyzed and transformed into multiple visualizations, and finally a presentation, to convey a meaningful story about the conclusions I drew from the data.  
 
 #### Data Sources
 * [EPA.gov](https://www.epa.gov/outdoor-air-quality-data)
@@ -55,38 +55,13 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 
 ## Methods
 <details>
-  <summary>Acquiring the Data</summary>
-  
-  I decided to look at nine cities, including the three I’ve lived in. While my focus was on those three cities, the others included provided a comparative baseline and covered different geographies, climates, population densities and flora.
+  <summary>Acquiring the Data</summary>  
+    
+  I decided to look at nine cities, including the three I’ve lived in. While my focus was on those three cities, the others included provided a comparative baseline and covered different geographies, climates, population densities and flora.  
 
-  The nine cities were split into three groups covering Western, Middle and Eastern US. The Western regions included Seattle, Washington; San Diego, California; and Phoenix, Arizona. The Mid-US regions included Minneapolis, Minnesota; Denver, Colorado; and Austin, Texas. The Eastern regions included Phildelphia, Pennsylvania; Nashville, Tennessee; and Jacksonville, Florida.
+  The nine cities were split into three groups covering Western, Middle and Eastern US. The Western regions included Seattle, Washington; San Diego, California; and Phoenix, Arizona. The Mid-US regions included Minneapolis, Minnesota; Denver, Colorado; and Austin, Texas. The Eastern regions included Phildelphia, Pennsylvania; Nashville, Tennessee; and Jacksonville, Florida.  
 
-  #### Pollen.com
-  
-  Collection of pollen data was achieved using webscraping. The data encompassed pollen-producing tree, grass and ragweed plants documented to grow in each city. The plants are categorized using flowering seasons (Spring, Summer, Fall and Winter), pollen type (Tree, Grass, Ragweed) and allergenicity levels (Mild, Moderate or Severe.) 
-
-  Webscraping algorithms were created using Python, Jupyter Notebooks and the Anaconda environment. The resulting dataset was saved as a DataFrame, which was cleaned and prepared and then exported as both a CSV and a Microsoft Excel file.
-
-  The main challenge was the need to simulate “mouse-click” behavior within the website to iterate through the different chart categories (e.g. season and type.) This challenge was overcome by incorporating the Python module, Selenium, into the webscraping algorithm. After researching the Selenium WebDriver documentation, installing the module, and incorporating its functionality, the algorithm successfully iterated through each of the website’s charts and retrieved the data needed for each city.
-
-  Tools used: _Webscraping, Python (modules: pandas, requests, bs4 (BeautifulSoup), selenium webdriver, time), Anaconda, Jupyter Notebooks._
-
-#### Wikipedia.org
-  Collection of general city information was achieved by webscraping each city’s Wikipedia website using Python and Jupyter Notebooks. The categories gleaned included city name, county, city land area, elevation, population census year, population density, metro population, population rank and climate type. This data was converted into a pandas DataFrame which was exported as both a CSV and a Microsoft Excel file.
-
-  There were many challenges encountered while obtaining data from Wikipedia, most of which involved either the html tags or the formatting of the values. The specific challenges were:
-  -	The wiki data was not consistently tagged or titled (e.g. several states had unique or mislabeled tags.)
-  -	Some cities had multiple climates and/or counties listed.
-  -	UNICODE characters and unexpected symbols were embedded in many values. 
-  -	Population and elevation data included both metric and standard measurements.
-  -	Some elevations contained a range of values instead of a single value. 
-
-  All issues were handled in the webscraping algorithm using conditional statements, string manipulation (splitting, slicing, concatenation and character replacement), averages for ranges, and consolidation via common wording or locale. The resulting DataFrame retained only a few missing values which were manually entered into the exported Excel file, where final formatting of the data also took place.
-
-  Tools used: _Webscaping, Excel, Python (modules: requests, pandas, numpy, bs4 (BeautifulSoup), and re (regex)), Anaconda, Jupyter Notebooks._
-
-
-#### EPA.org
+#### 1. EPA.org
   Collection of particulate pollution data began with understanding the EPA (US Environmental Protection Agency) AQS (Air Quality System) Data Dictionary, available as a PDF [here](https://www.epa.gov/aqs/aqs-data-dictionary). I then looked at understanding the measurement parameters for the AQS using the reference table, available as a CSV file [here](https://aqs.epa.gov/aqsweb/documents/codetables/parameters.html). I decided to cast a wide net and include, in addition to parameters used in NAAQS (National Ambient Air Quality Standards) decisions, a few other parameters I knew were also notable respiratory irritants. Of the 1,477 available parameters, I narrowed my list down to 10, which optimized the processing time spent retrieving API data due to the EPA website’s limit of 5 parameters per request. The parameters were chosen based on the following criteria:
   -   Compounds that are used in the AQI (Air Quality Index) Reports, including ground level ozone (O3), carbon monoxide (CO), nitrogen dioxide (NO2), sulfur dioxide (SO2), and particle pollution PM10 and PM2.5 which are “the most common ambient air pollutants regulated under the Clean Air Act” **(1)**. I chose to exclude parameter “88502”, characterized as “ACCEPTABLE PM2.5 AQI & SPECIATION MASS1”, which is not used in NAAQS decisions **(2)**.
   -   Other simple compounds that are known respiratory irritants such as smoke, carbon dioxide (CO2), nitric oxide (NO) and benzene.
@@ -98,16 +73,42 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
   2.	Across each city’s associated county.
   3.	Across each subset of the main list of parameters, maintaining the required limit of 5 parameters per request.
 
-  The data from each request was added to a common “AQS” DataFrame which contained a total of 56 columns and 5,664 rows, once data from all the API requests had been retrieved. 
+  The data from each request was added to a common “AQS” DataFrame which contained a total of 56 columns and 5,664 rows, once data from all the API requests had been retrieved.  
 
-  [Back to [Table of Contents](#Table-of-Contents)]
+#### 2. Pollen.com  
+  
+  Collection of pollen data was achieved using webscraping. The data encompassed pollen-producing tree, grass and ragweed plants documented to grow in each city. The plants are categorized using flowering seasons (Spring, Summer, Fall and Winter), pollen type (Tree, Grass, Ragweed) and allergenicity levels (Mild, Moderate or Severe.) 
+
+  Webscraping algorithms were created using Python, Jupyter Notebooks and the Anaconda environment. The resulting dataset was saved as a DataFrame, which was cleaned and prepared and then exported as both a CSV and a Microsoft Excel file.
+
+  The main challenge was the need to simulate “mouse-click” behavior within the website to iterate through the different chart categories (e.g. season and type.) This challenge was overcome by incorporating the Python module, Selenium, into the webscraping algorithm. After researching the Selenium WebDriver documentation, installing the module, and incorporating its functionality, the algorithm successfully iterated through each of the website’s charts and retrieved the data needed for each city.
+
+  Tools used: _Webscraping, Python (modules: pandas, requests, bs4 (BeautifulSoup), selenium webdriver, time), Anaconda, Jupyter Notebooks._
+
+#### 3. Wikipedia.org
+  
+  Collection of general city information was achieved by webscraping each city’s Wikipedia website using Python and Jupyter Notebooks. The categories gleaned included city name, county, city land area, elevation, population census year, population density, metro population, population rank and climate type. This data was converted into a pandas DataFrame which was exported as both a CSV and a Microsoft Excel file.
+
+  There were many challenges encountered while obtaining data from Wikipedia, most of which involved either the html tags or the formatting of the values. The specific challenges were:
+  -	The wiki data was not consistently tagged or titled (e.g. several states had unique or mislabeled tags.)
+  -	Some cities had multiple climates and/or counties listed.
+  -	UNICODE characters and unexpected symbols were embedded in many values. 
+  -	Population and elevation data included both metric and standard measurements.
+  -	Some elevations contained a range of values instead of a single value. 
+
+  All issues were handled in the webscraping algorithm using conditional statements, string manipulation (splitting, slicing, concatenation and character replacement), averages for ranges, and consolidation via common wording or locale. The resulting DataFrame retained only a few missing values which were manually entered into the exported Excel file, where final formatting of the data also took place.
+
+  Tools used: _Webscaping, Excel, Python (modules: requests, pandas, numpy, bs4 (BeautifulSoup), and re (regex)), Anaconda, Jupyter Notebooks._  
+
+  [Back to [Table of Contents](#Table-of-Contents)]    
 
 </details>
 
 <details>
-  <summary>Cleaning and Merging the Data</summary>
-  Much of the cleaning and data preparation took place either within the data collection algorithm or within the Python script before each dataset’s export, and involved only minor manipulations, such as converting a city and state field into two separate fields, or minor corrections of general city data, which were manually corrected in the exported Microsoft Excel file.
-
+  <summary>Cleaning and Merging the Data</summary>  
+    
+  Much of the cleaning and data preparation took place either within the data collection algorithm or within the Python script before each dataset’s export, and involved only minor manipulations, such as converting a city and state field into two separate fields, or minor corrections of general city data, which were manually corrected in the exported Microsoft Excel file.  
+     
   Exploration of the AQS DataFrame revealed the need for the following manipulations:
   1.	Filter for parameters that had data for all nine cities/counties for at least three years.
     Note: This unfortunately elimated measurements of smoke, Carbon dioxide (CO2), and Benzene (BZ), but retained measurements for Carbon monoxide (CO), Sulfur dioxide (SO2), Nitric oxide (NO), Nitrogen dioxide (NO2), Ozone (O3), PM10 and PM2.5. After some analysis of the data, however,  Nitric oxide was also eliminated to maintain a more consistent comparision for analysis regarding Air Quality Index categories, which does not include Nitric oxide in its dataset.
@@ -130,8 +131,9 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 
 </details>
 
-<details>
-  <summary>The Analysis</summary>
+<details>  
+  <summary>The Analysis</summary>  
+    
   In total, four tables were imported into Tableau, each in the form of a Microsoft Excel file. CSVs for each table were also available, however the dataset was sufficiently small to use with Excel to attempt to preserve a level of information about the tables’ various datatypes. In Tableau, a many-to-many relationship between the four tables was established based on the city name associated with each record.
 
   #### Pollen Analysis
@@ -156,9 +158,10 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 
 
 ## Conclusions
-  <details>
-    <summary>Details</summary>
-      In conclusion, those moving to Nashville from the far Southwest will be exposed to 7.5% more varieties of tree pollens, 3% more varieties of grass pollens, 10.5% less varieties of ragweed pollens and a 13-45% decrease in exposure to Unhealthy levels of air pollution. Those arriving from the Philadelphia region will be exposed to a lower variety of all types of pollens and only a small increase in air pollution. Those arriving from anywhere else will be exposed to a higher variety of all types of pollens, and either a decrease or a minor increase in exposure to Unhealthy levels of air pollution when moving from the North or South, respectively.
+<details>
+  <summary>Details</summary>  
+
+  In conclusion, those moving to Nashville from the far Southwest will be exposed to 7.5% more varieties of tree pollens, 3% more varieties of grass pollens, 10.5% less varieties of ragweed pollens and a 13-45% decrease in exposure to Unhealthy levels of air pollution. Those arriving from the Philadelphia region will be exposed to a lower variety of all types of pollens and only a small increase in air pollution. Those arriving from anywhere else will be exposed to a higher variety of all types of pollens, and either a decrease or a minor increase in exposure to Unhealthy levels of air pollution when moving from the North or South, respectively.  
 
   [Back to [Table of Contents](#Table-of-Contents)]
 
