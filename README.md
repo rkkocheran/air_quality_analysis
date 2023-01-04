@@ -31,8 +31,7 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 ## Data Sources and Tools
 <details>  
   <summary>Expand</summary>   
-
-  #### Overview
+  
   Data was extracted from three main sources:
   1.	EPA.com
   2.	Pollen.com
