@@ -206,6 +206,6 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 </details>
 
 ## Link to the Project
-[Explore the project dashboards by clicking here!](https://github.com/rkkocheran/air_quality_analysis/tree/main/presentation) There are many interactive features throughout the dashboards in the presentation. I encourage you to find out for yourself how Nashville’s air quality compares to other major cities around the country.
+[Explore the project dashboards by clicking here!](https://github.com/rkkocheran/air_quality_analysis) There are many interactive features throughout the dashboards in the presentation. I encourage you to find out for yourself how Nashville’s air quality compares to other major cities around the country.
 
 [Back to [Table of Contents](#Table-of-Contents)]
