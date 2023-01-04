@@ -10,10 +10,11 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 * [Final Remarks](#Final-Remarks)
 
 ## Motivation
-<details>
-  <summary>Details</summary>
+<details>  
+  <summary>Expand</summary>   
+     
   When my family and I moved to Nashville in 2017, we experienced a slew of respiratory issues we had never faced before. Yet we were not alone in this phenomenon. Rumor had it that Nashville was notorious for causing breathing troubles for those who move there from other states. Naturally, this project presented an excellent opportunity to look into Nashville’s air quality.  
-  
+    
   My personal journey began in San Diego, CA, where both my husband and I lived for the first twenty-five years. There, I only experienced breathing troubles during the occasional flu or cold. My husband, who is predisposed to respiratory issues, experienced mild allergies throughout the year. We then moved to Phoenix, AZ, where we lived for about two years. There, things more or less remained the same regarding our health. Then we moved to Nashville, where everything changed. I began experiencing allergy symptoms and my husband’s breathing became so compromised that anytime he got the flu or a cold, he would have to go to urgent care. In performing this analysis, I aim to equip myself and others with knowledge about potential causes for the common decline in respiratory health for those who move to Nashville from out of state.
 </details>
 
@@ -54,7 +55,7 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 [Back to [Table of Contents](#Table-of-Contents)]
 
 ## Methods
-<details>
+<details>  
   <summary>Acquiring the Data</summary>  
     
   I decided to look at nine cities, including the three I’ve lived in. While my focus was on those three cities, the others included provided a comparative baseline and covered different geographies, climates, population densities and flora.  
@@ -159,7 +160,7 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 
 ## Conclusions
 <details>
-  <summary>Details</summary>  
+  <summary>Expand</summary>  
 
   In conclusion, those moving to Nashville from the far Southwest will be exposed to 7.5% more varieties of tree pollens, 3% more varieties of grass pollens, 10.5% less varieties of ragweed pollens and a 13-45% decrease in exposure to Unhealthy levels of air pollution. Those arriving from the Philadelphia region will be exposed to a lower variety of all types of pollens and only a small increase in air pollution. Those arriving from anywhere else will be exposed to a higher variety of all types of pollens, and either a decrease or a minor increase in exposure to Unhealthy levels of air pollution when moving from the North or South, respectively.  
 
@@ -169,14 +170,15 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
 
 ## Final Remarks
 <details>
-  <summary>I would like to thank…</summary>
+  <summary>Expand</summary>
 
+#### I would like to thank...
   * [Nashville Software School](https://nashvillesoftwareschool.com/)
   * [The NSS DDA8 Cohort](https://nss-full-time-data-analytics-8.github.io/)
   * My academic instructors, advisors and supporters at Nashville Software School
   * Everyone whose encouragement and expertise helped transform this project from an idea into a reality
 
-  <summary>Credits…</summary>
+#### Credits...
 
   1. AQS images were obtained from: https://www.epa.gov/pmcourse/what-particle-pollution
   2. AQI images were obtained from: https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index
@@ -184,15 +186,13 @@ This is a repository for my NSS Data Analytics capstone project analysis about a
   4. Topographical maps were obtained from: https://en-us.topographic-map.com/
   5. Street maps were obtained from: https://www.openstreetmap.org/
 
-Other sources:
-1.	Patient Exposure and the Air Quality Index, available at https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index
-2.	Technical Note on Reporting PM2.5 Continuous Monitoring and Speciation Data to the Air Quality System (AQS), available at https://www.epa.gov/sites/default/files/2017-02/documents/contrept.pdf
-3.	AQS Data Dictionary [Version 2.28], section 3-22, available at as a PDF from https://www.epa.gov/aqs/aqs-data-dictionary
+#### Other sources:
+  1.	Patient Exposure and the Air Quality Index, available at https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index
+  2.	Technical Note on Reporting PM2.5 Continuous Monitoring and Speciation Data to the Air Quality System (AQS), available at https://www.epa.gov/sites/default/files/2017-02/documents/contrept.pdf
+  3.	AQS Data Dictionary [Version 2.28], section 3-22, available at as a PDF from https://www.epa.gov/aqs/aqs-data-dictionary
 
 
 ## Link to the Project
 [Explore the project dashboards by clicking here!](www.github) There are many customizable and interactive features throughout the dashboards in the presentation. I encourage you to find out for yourself how Nashville’s air quality compares to other major cities around the country.
 
-Back to [contents](#Contents)
-
-
+[Back to [Table of Contents](#Table-of-Contents)]
