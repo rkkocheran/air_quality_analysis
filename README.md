@@ -1,6 +1,6 @@
 # What’s In Your Air: A Comparative Analysis of Air Quality
-This is a repository for my NSS Data Analytics capstone project analysis about air quality across the US.
-Want to view the Tableau presentation? [Click here to explore the presentation dashboards on Tableau Public!](https://public.tableau.com/app/profile/rachel.kocheran)
+This is a repository for my capstone project about air quality across the US, completed during my Data Analytics apprenticeship at [Nashville Software School](https://nashvillesoftwareschool.com/). Want to view the Tableau presentation? [Click here to explore the presentation dashboards on Tableau Public!](https://public.tableau.com/app/profile/rachel.kocheran) In this project, I analyzed air quality trends across the US with a focus on Nashville to determine differences in pollen varieties and levels of airborne particulate matter. The technology and skills employed to achieve this goal include: Tableau, Python, SQL, Jupyter Notebooks, Anaconda, and Microsoft Excel.
+
 
 ## Table of Contents
 * [Motivation](#Motivation)
