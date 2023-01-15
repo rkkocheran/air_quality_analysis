@@ -1,5 +1,6 @@
 # What’s In Your Air: A Comparative Study of Nashville’s Air Quality
 This is a repository for my NSS Data Analytics capstone project analysis about air quality across the US.
+Want to view the Tableau presentation? [Click here to explore the presentation dashboards on Tableau Public!](https://public.tableau.com/app/profile/rachel.kocheran)
 
 ## Table of Contents
 * [Motivation](#Motivation)
